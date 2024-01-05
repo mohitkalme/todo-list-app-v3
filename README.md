@@ -3,7 +3,7 @@
 ```
 Local mysql database
 
-DATABASE_URL="mysql://<USERNAME>:<PASSWORD>@localhost:3306/todo_app"
+DATABASE_URL="mysql://<USERNAME>:<PASSWORD>@localhost:3306/<DATABASE_NAME>"
 
 # Temp railwayjs mysql instance
 DATABASE_URL=mysql://root:5EB56A3-DDBb3ce6fgCafe-1G3-eEB1B@roundhouse.proxy.rlwy.net:50686/railway
