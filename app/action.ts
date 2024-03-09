@@ -20,7 +20,7 @@ export async function createTodoAction({
   const text = formData.get("text") as string;
 
   try {
-    await prisma.todo_List_App_Todos_V3.create({
+    await prisma.todos.create({
       data: {
         id: newTodo.id,
         text: text.trim(),
@@ -38,7 +38,7 @@ export async function createTodoAction({
 
 export async function editTodoAction(todo: Todo) {
   try {
-    await prisma.todo_List_App_Todos_V3.update({
+    await prisma.todos.update({
       where: {
         id: todo.id,
       },
@@ -57,7 +57,7 @@ export async function editTodoAction(todo: Todo) {
 }
 export async function deleteTodoAction(id: string) {
   try {
-    await prisma.todo_List_App_Todos_V3.delete({
+    await prisma.todos.delete({
       where: {
         id,
       },
@@ -72,7 +72,7 @@ export async function deleteTodoAction(id: string) {
 }
 
 export async function toggleTodoAction(id: string, completed: boolean) {
-  await prisma.todo_List_App_Todos_V3.update({
+  await prisma.todos.update({
     where: {
       id,
     },
